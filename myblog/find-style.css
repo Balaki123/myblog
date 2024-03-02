@@ -1,0 +1,273 @@
+<style>
+.container1 {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-template-areas:
+"header header header header"
+"sidebar cards cards cards"
+"sidebar mains mains mains"
+"footer footer footer footer";
+grid-gap: 15px;
+}
+.header {
+grid-area: header;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-template-areas:
+"header-image header-image header-image header-image"
+"navbar navbar navbar navbar";
+height: 150px;
+}
+.header-image {
+grid-area: header-image;
+height: 120px;
+}
+.navbar {
+grid-area: navbar;
+height: 30px;
+color: white;
+display: flex;
+flex-direction: row;
+}
+.sidebar {
+grid-area: sidebar;
+background: green;
+height: 855px;
+
+width: 250px;
+    position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  overflow-x: hidden;
+margin-top: 180px;
+margin-left: 0px;
+}
+.cards {
+grid-area: cards;
+background: transparent;
+margin-top: 180px;
+margin-left: 105px;
+height: 305px;
+display: grid;
+grid-template-columns: repeat(4, fr);
+grid-template-rows: repeat(4, 1fr);
+grid-template-areas:
+"card1 card2 card3 card4"
+"card1 card2 card3 card4"
+"card1 card2 card3 card4"
+"card1 card2 card3 card4";
+grid-gap: 10px;
+}
+.card1 {
+grid-area: card1;
+height: 180px;
+width: 260px;
+background-image: linear-gradient(red, green, blue);
+color: white;
+margin-top: 25px;
+margin-left: 20px;
+}
+.card2 {
+grid-area: card2;
+height: 180px;
+width: 260px;
+background-image: linear-gradient(red, green, blue);
+color: white;
+margin-top: 25px;
+}
+.card3 {
+grid-area: card3;
+height: 180px;
+width: 260px;
+background-image: linear-gradient(red, green, blue);
+color: white;
+margin-top: 25px;
+}
+.card4 {
+grid-area: card4;
+height: 180px;
+width: 260px;
+background-image: linear-gradient(red, green, blue);
+color: white;
+margin-top: 25px;
+margin-right: 20px;
+}
+.mains {
+grid-area: mains;
+background: transparent;
+margin-left: 125px;
+height: 540px;
+margin-top: -90px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-template-areas:
+"posts posts featured featured"
+"posts posts featured featured"
+"posts posts featured featured"
+"posts posts featured featured";
+grid-gap: 10px;
+}
+.posts {
+grid-area: posts;
+background: transparent;
+display: flex;
+flex-direction:column;
+gap: 20px;
+overflow: scroll;
+}
+.type {
+background: brown;
+color: white;
+text-align: center;
+}
+.card-posts, .featured-cards {
+display: flex;
+flex-direction: row;
+gap: 15px;
+border: blue 3px solid;
+height:200px;
+}
+.card-content  {
+display: flex;
+flex-direction: column;
+gap: 20px;
+height: 195px;
+overdlow: scroll;
+}
+.featured-content {
+display: flex;
+flex-direction: column;
+gap: 15px;
+height: 240px;
+overdlow: scroll;
+}
+.post-desc, featured-desc {
+height: 255px;
+}
+.featured {
+grid-area: featured;
+background: transparent;
+overflow: scroll;
+display: flex;
+flex-direction:column;
+gap: 20px;
+}
+.img1, .img2 {
+width: 150px;
+height: 195px;
+}
+.featured-title, .featured-footer {
+background: blue;
+color: white;
+}
+
+.footer{
+grid-area: footer;
+background: blue;
+height: 150px;
+color: white;
+margin-top: 100px;
+margin-left: -15px;
+}
+
+.sidebar a {
+  line-height: 40px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f1f1f1;
+  display: block;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.sidebar a:hover {
+  background-color: white;
+color: blue;
+display: block;
+position: relative;
+transition: 0.3s;
+opacity: 0.95;
+border-radius: 7px;
+padding: 2px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar1 {padding-top: 15px;}
+  .sidebar1 a {font-size: 18px;}
+}
+.sidebar-menu1, .sidebar-menu2, .sidebar-menu {
+list-style: none;
+}
+.link-menu1, .link-menu2 {
+list-style: none;
+display: none;
+}
+.container-fluid {
+background: white;
+
+color: black;
+}
+.header-image {
+background: url('images/office-header.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+}
+.title {
+background: red;
+}
+.card-body {
+height: 250px;
+}
+.card-footer {
+background: blue;
+}
+.btn1, .btn2, .btn3, .btn4 {
+background: red;
+color: white;
+font-weight: 700;
+padding: 3px 3px;
+margin-left: 105px;
+}
+.container2 {
+margin-left: 135px;
+margin-top: -200px;
+}
+.search  {
+margin-left: -210px;
+}
+.numb1, .numb2, .numb3 {
+margin-left: 50px;
+margin-top: 10px;
+}
+.nav {
+display: inline;
+}
+.post-title, .post-footer {
+background: blue;
+color: white;
+}
+.footer {
+margin-top: 40px;
+}
+.container2 {
+height: 760px;
+}
+.card-body {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.icons {
+margin-top: 54px;
+margin-right: 40px;
+font-size: 20px;
+}
+.numb1, .numb2, .numb3, .numb4 {
+font-size: 20px;
+}
+</style>

@@ -1,0 +1,38 @@
+<div class="slide-container swiper">
+<div class="card-team swiper-wrapper">
+<?php
+$stmt ="select * from users";
+$res = mysqli_query($conn, $stmt);
+$design = array();
+array_push($design, "CEO","Web Developer","Administrator","Content Writer");
+$i = 0;
+while($rows = mysqli_fetch_assoc($res))
+{
+?>
+<div class="card-slider1 swiper-slide">
+<div class="card-img"><img class="img1" src="./images/<?=$rows['picture']; ?>" width=75 height=50></div>
+<div class="profile">
+<table class="profiles">
+<tr><td>Name</td><td>: </td><td><?=$rows['name']; ?></td></tr>
+<tr><td></td></tr>
+<tr><td>Emailid</td><td>: </td><td><?=$rows['emaild']; ?></td></tr>
+<tr><td></td></tr>
+<tr><td>Joined Date</td><td>:</td><td><?=$rows['createdon']; ?></td></tr>
+<tr><td></td></tr>
+<tr><td>Designation</td><td>:</td><td><?=$design[$i]; ?></td></tr>
+</table>
+</div>
+
+ </div>
+<?php
+$i++;
+}
+?>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+<div class="portfolio">
+portfolio
+</div>
